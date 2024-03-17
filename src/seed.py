@@ -1,13 +1,16 @@
 import logging
-import sqlite3
 import faker
 from datetime import datetime
 from random import randint
 
-from src.config import *
 from src.connect_db import session
 from src.models import StudentsGroups, Students, Teachers, Subjects, Grades
 
+NUMBER_STUDENTS = 50
+NUMBER_GROUPS = 3
+NUMBER_SUBJECTS = 8
+NUMBER_TEACHERS = 5
+NUMBER_GRADES = 20
 
 def generate_fake_data(
         number_students,
